@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>test-web-developer-master</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--<link rel="stylesheet" href="site.css"> -->
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
+ </head>
+<body>
+  <script type='text/template' id='src'> 
+    <div class="container">
+      <header class="container-fluid">
+            <div class="navbar-header">
+              <img class="img-responsive" src="images\logo.png" alt="logo"  />
+            </div>
+            <nav class="buttongroup-container pull-right">
+              <nav class="btn-group">
+                <button type="button" class="btn btn-info">HOME</button>
+                <button type="button" class="btn btn-info">UNO</button>
+                <button type="button" class="btn btn-info">DOS</button>
+                <button type="button" class="btn btn-info">TRES</button>
+              </nav>
+            </nav>
+      </header>
+      <section class="jumbotron">
+        <img class="img-thumbnail" src=".\images\slideshow\1.jpg" alt="1" id="slide" width="100%" height="100%" />   
+      </section>
+      <div class="row">
+        <section class="span50 span50-1 col-md-4">
+          <h3>This is some content</h3>
+          <figure>
+            <img class="img-thumbnail" src="images\column-left.jpg" alt="column-left"  />
+          </figure>
+          <article>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. 
+             Seperated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </article>
+        </section>
+        <section class="span50 col-md-4">
+          <h3>This is some content</h3>
+          <figure>
+            <img class="img-thumbnail" src="images\column-center.jpg" alt="column-center"  />
+          </figure>
+          <ul class="checkmarkerlist">
+              <li>Sed lacinia enim et nisl viverra.</li>
+              <li>Nullam elementum quam in luctus.</li>
+              <li>Integer ac et lacus hendrerit pretium.</li>
+              <li>Donec placerat dui et blandit.</li>
+              <li>Nullam elementum quam in luctus.</li>
+          </ul>
+        </section>  
+        <section id="comment" class="span0 col-md-4">
+          <h3>What Others are saying</h3>
+          <table class="table table-striped table-bordered">
+            <tbody>
+              {{#each objects}} 
+              <tr>
+                <td>
+                <h4>"{{comment}}"</h4>
+                <span><b>-{{name}},</b> <time>{{prettifyDate timestamp}}</time></span>
+                </td>
+              </tr>       
+             {{/each}}
+            </tbody>
+          </table>             
+        </section>
+      </div>
+      <footer class="container-fluid">
+        <div class="navbar-footer">
+            <!--<a class="navbar-brand">&copy;Copyright. All rights reserved.</a>-->
+            <span class="navbar-brand">&copy;Copyright. All rights reserved.</span>
+        </div>
+        <nav class="listgroup-container">
+            <ul class="list-inline pull-right">
+                <li><a href="#">HOME</a></li>|
+                <li><a href="#">UNO</a></li>|
+                <li><a href="#">DOS</a></li>|
+                <li><a href="#">TRES</a></li>
+            </ul>
+        </nav>
+      </footer>
+    </div>
+  </script>
+  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
+  <script src=".\js\comment.js"></script>   
+  <script src=".\js\slideshow.js"></script>
+</body>
+</html>
+
